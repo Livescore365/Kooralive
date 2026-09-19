@@ -374,5 +374,72 @@ footer {
   data-theme="white"
   data-show-errors="true" data-refresh="60"
 ></api-sports-widget>
+<script>
+const translations = {
+  ar: {
+    nav: ["الرئيسية", "مباشر", "اليوم", "المباريات", "النتائج", "الدوريات", "الترتيب"],
+    title: "جميع نتائج كرة القدم",
+    title2: "في مكان واحد",
+    desc: "نتائج مباشرة، مباريات، ترتيب الدوريات وكل ما يخص كرة القدم",
+    search: "ابحث عن فريق أو دوري أو مباراة",
+    live: "🔴 المباريات المباشرة",
+    allLive: "شاهد جميع المباريات المباشرة ←"
+  },
+  es: {
+    nav: ["Inicio", "En directo", "Hoy", "Partidos", "Resultados", "Ligas", "Clasificación"],
+    title: "Todos los resultados de fútbol",
+    title2: "en un solo lugar",
+    desc: "Resultados en directo, partidos, clasificaciones y todo sobre el fútbol",
+    search: "Busca un equipo, liga o partido",
+    live: "🔴 Partidos en directo",
+    allLive: "Ver todos los partidos en directo →"
+  },
+  fr: {
+    nav: ["Accueil", "Direct", "Aujourd'hui", "Matchs", "Résultats", "Ligues", "Classement"],
+    title: "Tous les résultats de football",
+    title2: "au même endroit",
+    desc: "Résultats en direct, matchs, classements et tout sur le football",
+    search: "Rechercher une équipe, une ligue ou un match",
+    live: "🔴 Matchs en direct",
+    allLive: "Voir tous les matchs en direct →"
+  },
+  en: {
+    nav: ["Home", "Live", "Today", "Matches", "Results", "Leagues", "Standings"],
+    title: "All Football Results",
+    title2: "in one place",
+    desc: "Live scores, matches, league standings and everything about football",
+    search: "Search for a team, league or match",
+    live: "🔴 Live Matches",
+    allLive: "View all live matches →"
+  }
+};
+
+const selector = document.getElementById("languageSelector");
+
+function changeLanguage(lang) {
+  const t = translations[lang];
+
+  document.querySelectorAll("nav a").forEach((link, i) => {
+    link.textContent = t.nav[i];
+  });
+
+  document.querySelector(".hero h1").childNodes[0].textContent = t.title + " ";
+  document.querySelector(".hero h1 span").textContent = t.title2;
+  document.querySelector(".hero p").textContent = t.desc;
+  document.querySelector(".search").placeholder = t.search;
+  document.querySelector(".live-title").textContent = t.live;
+  document.querySelector(".section-title strong").textContent = t.allLive;
+
+  document.documentElement.dir = lang === "ar" ? "rtl" : "ltr";
+  document.documentElement.lang = lang;
+}
+
+selector.addEventListener("change", function() {
+  changeLanguage(this.value);
+});
+
+changeLanguage("ar");
+  </script>
+    
 </body>
 </html>
