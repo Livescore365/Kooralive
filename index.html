@@ -6,311 +6,214 @@
   <title>Kooralive - كورة لايف | نتائج مباريات كرة القدم مباشرة</title>
 <meta name="description" content="Kooralive - كورة لايف لمتابعة نتائج مباريات كرة القدم مباشرة، المباريات اليوم، النتائج، الدوريات والترتيب.">
   <style>
-    * {
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
-    }
-
-    body {
-      font-family: Arial, sans-serif;
-      background: #f4f6f8;
-      color: #17202a;
-    }
-
-    header {
-      background: #071521;
-      color: white;
-      padding: 18px 5%;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-    }
-
-    .logo {
-      font-size: 28px;
-      font-weight: bold;
-    }
-
-    .logo span {
-      color: #32df79;
-    }
-
-    .subtitle {
-      font-size: 13px;
-      color: #cbd5dc;
-      margin-top: 4px;
-    }
-
-    nav {
-      background: #0c1d2b;
-      display: flex;
-      justify-content: center;
-      gap: 25px;
-      padding: 15px;
-      overflow-x: auto;
-    }
-
-    nav a {
-      color: white;
-      text-decoration: none;
-      font-weight: bold;
-      white-space: nowrap;
-    }
-
-    nav a:hover {
-      color: #32df79;
-    }
-
-    .hero {
-      background: linear-gradient(135deg, #071521, #123d5c);
-      color: white;
-      text-align: center;
-      padding: 55px 20px;
-    }
-
-    .hero h1 {
-      font-size: 42px;
-      margin-bottom: 12px;
-    }
-
-    .hero h1 span {
-      color: #32df79;
-    }
-
-    .hero p {
-      font-size: 18px;
-      margin-bottom: 25px;
-      color: #dce5ea;
-    }
-
-    .search {
-      width: 90%;
-      max-width: 650px;
-      padding: 16px 20px;
-      border-radius: 30px;
-      border: none;
-      font-size: 16px;
-    }
-
-    .container {
-      width: 92%;
-      max-width: 1100px;
-      margin: 30px auto;
-    }
-
-    .section-title {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      margin-bottom: 15px;
-    }
-
-    .section-title h2 {
-      font-size: 24px;
-    }
-
-    .live-title {
-      color: #e63946;
-    }
-
-    .match {
-      background: white;
-      margin-bottom: 8px;
-      padding: 18px;
-      border-radius: 10px;
-      display: grid;
-      grid-template-columns: 80px 1fr 100px 1fr;
-      align-items: center;
-      gap: 10px;
-      box-shadow: 0 2px 8px rgba(0,0,0,0.06);
-    }
-
-    .time {
-      font-weight: bold;
-      color: #e63946;
-    }
-
-    .team {
-      font-size: 17px;
-      font-weight: bold;
-    }
-
-    .score {
-      background: #071521;
-      color: white;
-      padding: 8px 12px;
-      border-radius: 8px;
-      text-align: center;
-      font-weight: bold;
-    }
-
-    .league {
-      color: #65727c;
-      font-size: 13px;
-    }
-
-    footer {
-      margin-top: 50px;
-      background: #071521;
-      color: white;
-      text-align: center;
-      padding: 30px;
-    }
-
-    footer span {
-      color: #32df79;
-    }
-
-    @media (max-width: 650px) {
-      .hero h1 {
-        font-size: 32px;
-      }
-
-      .match {
-        grid-template-columns: 60px 1fr 65px 1fr;
-        padding: 13px 8px;
-      }
-
-      .team {
-        font-size: 14px;
-      }
-
-      .league {
-        display: none;
-      }
-
-      nav {
-        justify-content: flex-start;
-      }
-    }/* ===== ARABIC PROFESSIONAL DESIGN ===== */
-
-html {
-  direction: rtl;
+   * {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
 body {
-  background: #071521 !important;
-  color: #ffffff !important;
   font-family: Arial, sans-serif;
+  background: #071521;
+  color: #ffffff;
+  line-height: 1.6;
 }
 
 header {
-  background: #06111c !important;
-  padding: 18px 6% !important;
-  border-bottom: 1px solid #183142;
+  background: #06111c;
+  padding: 18px 5%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 1px solid #183044;
 }
 
 .logo {
-  font-size: 28px !important;
-  font-weight: 800;
+  font-size: 30px;
+  font-weight: bold;
+  color: #ffffff;
 }
 
 .logo span {
-  color: #32df79 !important;
+  color: #19e875;
 }
 
 .subtitle {
-  color: #a9b7c2 !important;
+  color: #9fb2c3;
+  font-size: 13px;
+  margin-top: 3px;
 }
 
 nav {
-  background: #0a1b29 !important;
-  justify-content: center !important;
-  direction: rtl;
-  border-bottom: 1px solid #183142;
+  background: #0b1d2b;
+  padding: 12px 5%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 22px;
+  flex-wrap: wrap;
+  border-bottom: 1px solid #183044;
 }
 
 nav a {
-  color: #ffffff !important;
+  color: #ffffff;
+  text-decoration: none;
+  font-size: 15px;
   font-weight: bold;
 }
 
 nav a:hover {
-  color: #32df79 !important;
+  color: #19e875;
+}
+
+#languageSelector {
+  background: #122a3b;
+  color: white;
+  border: 1px solid #29465b;
+  border-radius: 8px;
+  padding: 8px 12px;
+  font-size: 14px;
 }
 
 .hero {
-  background:
-    linear-gradient(135deg, #06111c, #0b3045) !important;
-  padding: 75px 20px !important;
-  border-bottom: 1px solid #183142;
+  background: linear-gradient(135deg, #082236, #063c35);
+  padding: 70px 20px;
+  text-align: center;
+  border-bottom: 1px solid #183044;
 }
 
 .hero h1 {
-  font-size: 42px !important;
+  font-size: 42px;
   font-weight: 800;
+  margin-bottom: 15px;
 }
 
 .hero h1 span {
-  color: #32df79 !important;
+  color: #19e875;
 }
 
 .hero p {
-  color: #c5d0d8 !important;
+  color: #b7c8d5;
+  font-size: 17px;
+  margin-bottom: 30px;
 }
 
-.container {
-  background: #071521;
+.search {
+  width: 90%;
+  max-width: 650px;
+  padding: 18px 25px;
+  border: none;
+  border-radius: 40px;
+  font-size: 17px;
+  outline: none;
+  text-align: center;
+  box-shadow: 0 8px 30px rgba(0,0,0,.25);
 }
 
-.section-title {
-  color: #ffffff !important;
+main {
+  width: 92%;
+  max-width: 1250px;
+  margin: 35px auto;
 }
 
 .live-title {
-  color: #32df79 !important;
+  color: #19e875;
+  font-size: 30px;
+  font-weight: bold;
 }
 
-.match-card {
-  background: #0d2231 !important;
-  border: 1px solid #18394d !important;
-  border-radius: 14px !important;
-  color: white !important;
-  margin-bottom: 12px;
+.section-title {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+  gap: 15px;
 }
 
-.team {
-  color: #ffffff !important;
+.section-title strong {
+  color: #ffffff;
+  font-size: 16px;
 }
 
-.score {
-  color: #32df79 !important;
+.section-title strong:hover {
+  color: #19e875;
+}
+
+.live-section {
+  background: #0b1d2b;
+  border-radius: 18px;
+  padding: 25px;
+  border: 1px solid #183044;
+  box-shadow: 0 10px 30px rgba(0,0,0,.2);
+}
+
+api-sports-widget {
+  display: block;
+  width: 100%;
+  margin-top: 15px;
 }
 
 footer {
-  background: #06111c !important;
-  color: #a9b7c2 !important;
+  background: #06111c;
+  color: #8fa5b6;
+  text-align: center;
+  padding: 35px 20px;
+  margin-top: 50px;
+  border-top: 1px solid #183044;
 }
 
-/* Mobile */
-@media (max-width: 600px) {
+button {
+  border-radius: 8px;
+}
+
+@media (max-width: 700px) {
   header {
-    padding: 16px 18px !important;
+    padding: 15px 20px;
   }
 
   .logo {
-    font-size: 24px !important;
+    font-size: 25px;
   }
 
   nav {
-    justify-content: flex-start !important;
-    overflow-x: auto;
+    gap: 10px;
+    padding: 12px;
+  }
+
+  nav a {
+    font-size: 13px;
   }
 
   .hero {
-    padding: 55px 18px !important;
+    padding: 50px 15px;
   }
 
   .hero h1 {
-    font-size: 32px !important;
-    line-height: 1.25;
+    font-size: 30px;
   }
 
   .hero p {
-    font-size: 16px !important;
+    font-size: 15px;
   }
-      }
+
+  .search {
+    width: 95%;
+    padding: 15px;
+  }
+
+  main {
+    width: 96%;
+  }
+
+  .live-section {
+    padding: 12px;
+    border-radius: 12px;
+  }
+
+  .live-title {
+    font-size: 24px;
+  }
+} 
   </style>
 <script type="module" crossorigin src="https://widgets.api-sports.io/3.1.0/widgets.js"></script>
 <meta name="google-site-verification" content="googlebc0b9616d7ab6f81">
